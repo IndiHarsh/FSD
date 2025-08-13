@@ -1,0 +1,275 @@
+/* Base Styles */
+:root {
+    --primary-color: #7C9EC2;
+    --secondary-color: #E6EEF5;
+    --accent-color: #B4A7D6;
+    --text-color: #2C3E50;
+    --light-text: #6C7A89;
+    --background: #FFFFFF;
+    --card-background: #F8FAFC;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background);
+}
+
+/* Typography */
+h1, h2, h3 {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+p {
+    margin-bottom: 1rem;
+    color: var(--light-text);
+}
+
+/* Header & Navigation */
+.hero {
+    background-color: var(--secondary-color);
+    padding: 2rem 5%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.hero-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.tagline {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    max-width: 600px;
+}
+
+/* Sections */
+section {
+    padding: 5rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Features */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.feature-card {
+    background: var(--card-background);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Screenshots */
+.screenshot-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+figure {
+    text-align: center;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px var(--shadow);
+    margin-bottom: 1rem;
+}
+
+figcaption {
+    color: var(--light-text);
+    font-size: 0.9rem;
+}
+
+/* Technology */
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.tech-item {
+    text-align: center;
+    padding: 2rem;
+    background: var(--card-background);
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px var(--shadow);
+}
+
+/* Impact */
+.impact {
+    background-color: var(--secondary-color);
+}
+
+blockquote {
+    margin: 2rem 0;
+    padding: 2rem;
+    background: var(--background);
+    border-left: 4px solid var(--primary-color);
+    border-radius: 0.5rem;
+    font-style: italic;
+}
+
+cite {
+    display: block;
+    margin-top: 1rem;
+    color: var(--light-text);
+    font-style: normal;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--background);
+    padding: 3rem 5%;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.made-by {
+    color: var(--background);
+    margin-bottom: 1.5rem;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: var(--background);
+    color: var(--primary-color);
+    text-decoration: none;
+    border-radius: 2rem;
+    font-weight: 500;
+    transition: transform 0.3s ease;
+    margin-bottom: 1.5rem;
+}
+
+.contact-button:hover {
+    transform: scale(1.05);
+}
+
+.copyright {
+    color: var(--background);
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .nav-links {
+        display: none; /* In a real project, we'd add a hamburger menu with JavaScript */
+    }
+
+    section {
+        padding: 3rem 5%;
+    }
+
+    .feature-grid,
+    .screenshot-grid,
+    .tech-grid {
+        grid-template-columns: 1fr;
+    }
+}
